@@ -204,6 +204,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const { radius, step, visibleSide } = getConfig();
 
       cards.forEach((card, i) => {
+        card.classList.toggle('carousel__card--active', i === active);
         // Wrap offset so carousel loops
         let offset = i - active;
         if (offset > total / 2) offset -= total;
@@ -255,6 +256,22 @@ document.addEventListener('DOMContentLoaded', () => {
       clearInterval(autoTimer);
       autoTimer = setInterval(autoAdvance, 3000);
     }
+
+    // Arrow buttons
+    const prevBtn = document.getElementById('carouselPrev');
+    const nextBtn = document.getElementById('carouselNext');
+
+    prevBtn.addEventListener('click', () => {
+      active = (active - 1 + total) % total;
+      updateCarousel();
+      resetAutoPlay();
+    });
+
+    nextBtn.addEventListener('click', () => {
+      active = (active + 1) % total;
+      updateCarousel();
+      resetAutoPlay();
+    });
 
     // Touch/swipe
     let startX = 0;
