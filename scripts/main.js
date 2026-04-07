@@ -234,9 +234,10 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
 
-    // Click to navigate
+    // Click to navigate (only if not dragging)
     cards.forEach((card, i) => {
       card.addEventListener('click', (e) => {
+        if (hasDragged) { e.preventDefault(); return; }
         if (i !== active) {
           e.preventDefault();
           active = i;
@@ -257,43 +258,46 @@ document.addEventListener('DOMContentLoaded', () => {
       autoTimer = setInterval(autoAdvance, 3000);
     }
 
-    // Arrow buttons
-    const prevBtn = document.getElementById('carouselPrev');
-    const nextBtn = document.getElementById('carouselNext');
-
-    prevBtn.addEventListener('click', () => {
-      active = (active - 1 + total) % total;
-      updateCarousel();
-      resetAutoPlay();
-    });
-
-    nextBtn.addEventListener('click', () => {
-      active = (active + 1) % total;
-      updateCarousel();
-      resetAutoPlay();
-    });
-
-    // Touch/swipe
+    // Drag-to-scroll (continuous)
+    const DRAG_THRESHOLD = 80; // px per card advance
     let startX = 0;
+    let dragAccum = 0;
     let isDragging = false;
+    let hasDragged = false;
 
     carousel.addEventListener('pointerdown', (e) => {
       startX = e.clientX;
+      dragAccum = 0;
       isDragging = true;
+      hasDragged = false;
+      carousel.classList.add('is-dragging');
+      carousel.setPointerCapture(e.pointerId);
+      clearInterval(autoTimer);
     });
 
-    carousel.addEventListener('pointerup', (e) => {
+    carousel.addEventListener('pointermove', (e) => {
       if (!isDragging) return;
-      isDragging = false;
-      const diff = e.clientX - startX;
-      if (Math.abs(diff) > 40) {
-        active = diff > 0
-          ? (active - 1 + total) % total
-          : (active + 1) % total;
+      const delta = e.clientX - startX;
+      const diff = delta - dragAccum;
+
+      if (Math.abs(diff) >= DRAG_THRESHOLD) {
+        const steps = Math.trunc(diff / DRAG_THRESHOLD);
+        active = ((active - steps) % total + total) % total;
         updateCarousel();
-        resetAutoPlay();
+        dragAccum += steps * DRAG_THRESHOLD;
+        hasDragged = true;
       }
     });
+
+    const endDrag = () => {
+      if (!isDragging) return;
+      isDragging = false;
+      carousel.classList.remove('is-dragging');
+      resetAutoPlay();
+    };
+
+    carousel.addEventListener('pointerup', endDrag);
+    carousel.addEventListener('pointercancel', endDrag);
 
     updateCarousel();
     resetAutoPlay();
