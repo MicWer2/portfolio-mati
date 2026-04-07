@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Matias Güernos — Content Strategist & Video Editor</title>
+  <meta name="description" content="Portfolio de Matias Güernos. Content Strategist & Video Editor. Creando historias visuales que conectan.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <a href="#" class="nav__logo">MG</a>
+    <button class="nav__toggle" id="navToggle" aria-label="Abrir menú">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <ul class="nav__links" id="navLinks">
+      <li><a href="#about" data-i18n="nav.about">Sobre mí</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Works</a></li>
+      <li><a href="#contact" data-i18n="nav.contact">Contacto</a></li>
+      <li>
+        <button class="lang-toggle" id="langToggle">
+          <span class="lang-toggle__option lang-toggle__option--active" data-lang="es">Spa</span>
+          <span class="lang-toggle__divider">|</span>
+          <span class="lang-toggle__option" data-lang="en">Eng</span>
+        </button>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero__bg">
+      <div class="hero__grid-lines"></div>
+      <div class="hero__blob hero__blob--1"></div>
+      <div class="hero__blob hero__blob--2"></div>
+    </div>
+    <div class="hero__content container">
+      <div class="hero__heading-wrapper reveal">
+        <h1 class="hero__heading" data-i18n="hero.heading">Marketing <span class="text-accent">estratégico,</span><br>con visión de <span class="text-accent">negocio</span></h1>
+      </div>
+      <!-- 3D Arc Carousel -->
+      <div class="carousel reveal" id="carousel">
+        <div class="carousel__track">
+          <a href="#projects" class="carousel__card">
+            <img class="carousel__card-img" src="https://img.youtube.com/vi/4YrPQBa1Cz4/hqdefault.jpg" alt="Autocentro ANG" loading="lazy">
+            <div class="carousel__card-overlay">
+              <h3 class="carousel__card-title" data-i18n="carousel.1">Estrategia de crecimiento de comunidad</h3>
+            </div>
+          </a>
+          <a href="#projects" class="carousel__card">
+            <img class="carousel__card-img" src="https://img.youtube.com/vi/MG1NNLLYK0M/hqdefault.jpg" alt="Autocentro ANG" loading="lazy">
+            <div class="carousel__card-overlay">
+              <h3 class="carousel__card-title" data-i18n="carousel.2">Campañas de alto impacto</h3>
+            </div>
+          </a>
+          <a href="#projects" class="carousel__card">
+            <img class="carousel__card-img" src="https://img.youtube.com/vi/obcW2DmlRxU/hqdefault.jpg" alt="Infinity Racing" loading="lazy">
+            <div class="carousel__card-overlay">
+              <h3 class="carousel__card-title" data-i18n="carousel.3">Contenido para multinacionales</h3>
+            </div>
+          </a>
+          <a href="#projects" class="carousel__card">
+            <img class="carousel__card-img" src="https://img.youtube.com/vi/-U3UAA9GNaE/hqdefault.jpg" alt="Autocentro ANG" loading="lazy">
+            <div class="carousel__card-overlay">
+              <h3 class="carousel__card-title" data-i18n="carousel.4">Video publicitario de alta retención</h3>
+            </div>
+          </a>
+          <a href="#projects" class="carousel__card">
+            <img class="carousel__card-img" src="https://img.youtube.com/vi/odaUHyfWo8s/hqdefault.jpg" alt="Infinity Racing" loading="lazy">
+            <div class="carousel__card-overlay">
+              <h3 class="carousel__card-title" data-i18n="carousel.5">Producción audiovisual para redes</h3>
+            </div>
+          </a>
+          <a href="#projects" class="carousel__card">
+            <img class="carousel__card-img" src="https://img.youtube.com/vi/Hol2_bHCSQ8/hqdefault.jpg" alt="Autocentro ANG" loading="lazy">
+            <div class="carousel__card-overlay">
+              <h3 class="carousel__card-title" data-i18n="carousel.6">Reels y TikToks virales</h3>
+            </div>
+          </a>
+          <a href="#projects" class="carousel__card">
+            <img class="carousel__card-img" src="https://img.youtube.com/vi/bh6bu12KMbU/hqdefault.jpg" alt="Infinity Racing" loading="lazy">
+            <div class="carousel__card-overlay">
+              <h3 class="carousel__card-title" data-i18n="carousel.7">Diseño de activos digitales</h3>
+            </div>
+          </a>
+          <a href="#projects" class="carousel__card">
+            <img class="carousel__card-img" src="https://img.youtube.com/vi/vLbxyy1yAHs/hqdefault.jpg" alt="Autocentro ANG" loading="lazy">
+            <div class="carousel__card-overlay">
+              <h3 class="carousel__card-title" data-i18n="carousel.8">Estrategia de contenido con IA</h3>
+            </div>
+          </a>
+          <a href="#projects" class="carousel__card">
+            <img class="carousel__card-img" src="https://img.youtube.com/vi/eZv2w9MPWWM/hqdefault.jpg" alt="Infinity Racing" loading="lazy">
+            <div class="carousel__card-overlay">
+              <h3 class="carousel__card-title" data-i18n="carousel.9">Layouts publicitarios creativos</h3>
+            </div>
+          </a>
+          <a href="#projects" class="carousel__card">
+            <img class="carousel__card-img" src="https://img.youtube.com/vi/VKRJmVmKSHA/hqdefault.jpg" alt="Wer Studio" loading="lazy">
+            <div class="carousel__card-overlay">
+              <h3 class="carousel__card-title" data-i18n="carousel.10">Branding y posicionamiento digital</h3>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="hero__scroll-indicator">
+      <div class="hero__scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="about__grid">
+        <div class="about__image reveal">
+          <img src="assets/fotomati.png" alt="Matias Güernos filmando" loading="lazy">
+        </div>
+        <div class="about__content">
+          <h2 class="about__heading reveal" data-i18n="about.heading">Hola, soy Matias</h2>
+          <p class="about__text reveal" data-i18n="about.text1">
+            Soy Licenciado en Comercialización con especialización en Marketing. Mi enfoque
+            no es solo crear videos, sino diseñar soluciones que conviertan seguidores en clientes.
+          </p>
+          <p class="about__text reveal" data-i18n="about.text2">
+            Me mantengo a la vanguardia con el uso de Inteligencia Artificial y las últimas
+            tendencias de consumo para asegurar que cada pieza de contenido sea relevante y eficiente.
+          </p>
+          <p class="about__text reveal" data-i18n="about.text3">
+            Cuento con experiencia comprobable potenciando marcas en diversos sectores:
+          </p>
+          <ul class="about__list reveal">
+            <li data-i18n="about.list1"><strong>ZN PRO:</strong> Estrategia de crecimiento exponencial de comunidad.</li>
+            <li data-i18n="about.list2"><strong>Infinity Racing:</strong> Gestión de contenido para una empresa multinacional.</li>
+            <li data-i18n="about.list3"><strong>Autocentro ANG & Wer Studio:</strong> Desarrollo de activos digitales de alta retención.</li>
+          </ul>
+          <a href="#projects" class="about__cta reveal" data-i18n="about.cta">Ver casos de éxito</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="skills" id="skills">
+    <div class="container">
+      <span class="skills__label reveal">Skills</span>
+      <h2 class="skills__title reveal" data-i18n="skills.title">Diseño, <span class="text-accent">edición</span><br>y estrategia de <span class="text-accent">contenido.</span></h2>
+      <div class="skills__grid reveal">
+        <a href="#projects" class="skills__card skills__card--featured">
+          <div class="skills__card-header">
+            <span class="skills__card-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg>
+            </span>
+            <span class="skills__card-tools">Figma & Canva</span>
+          </div>
+          <h3 class="skills__card-title" data-i18n="skills.card1.title">Diseño Gráfico</h3>
+          <p class="skills__card-desc" data-i18n="skills.card1.desc">Desarrollo de diseños publicitarios, banners para sitios web, redes sociales, diseño visual, presentaciones, etc.</p>
+          <div class="skills__card-footer">
+            <span class="skills__card-footlabel" data-i18n="skills.card1.foot">Herramientas de Diseño</span>
+            <span class="skills__card-arrow">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" fill="var(--accent)"/><path d="M10 8l4 4-4 4" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </div>
+        </a>
+        <a href="#projects" class="skills__card">
+          <div class="skills__card-header">
+            <span class="skills__card-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><polygon points="10,8 16,12 10,16" fill="currentColor" stroke="none"/></svg>
+            </span>
+            <span class="skills__card-tools">Ae, CapCut & Alight Motion</span>
+          </div>
+          <h3 class="skills__card-title" data-i18n="skills.card2.title">Edición de Video</h3>
+          <p class="skills__card-desc" data-i18n="skills.card2.desc">Edición de video y layouts publicitarios para redes sociales (TikTok, Reels, Instagram) y canales de YouTube.</p>
+          <div class="skills__card-footer">
+            <span class="skills__card-footlabel" data-i18n="skills.card2.foot">Post-Producción</span>
+            <span class="skills__card-arrow">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" fill="var(--accent)"/><path d="M10 8l4 4-4 4" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </div>
+        </a>
+        <a href="#projects" class="skills__card">
+          <div class="skills__card-header">
+            <span class="skills__card-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+            </span>
+            <span class="skills__card-tools">IA & Analytics</span>
+          </div>
+          <h3 class="skills__card-title" data-i18n="skills.card3.title">Estrategia de Contenido</h3>
+          <p class="skills__card-desc" data-i18n="skills.card3.desc">Planificación estratégica basada en datos, tendencias de consumo e inteligencia artificial para máximo impacto.</p>
+          <div class="skills__card-footer">
+            <span class="skills__card-footlabel" data-i18n="skills.card3.foot">Marketing Digital</span>
+            <span class="skills__card-arrow">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" fill="var(--accent)"/><path d="M10 8l4 4-4 4" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORKS: ZN PRO -->
+  <section class="work-client" id="projects">
+    <div class="container">
+      <div class="work-client__header reveal">
+        <span class="work-client__number">01</span>
+        <h2 class="work-client__name">ZN PRO</h2>
+        <span class="work-client__role">Content Strategist</span>
+        <p class="work-client__desc" data-i18n="work.zn.desc">Estrategia de crecimiento exponencial de comunidad. Creación de contenido orgánico y campañas de alto impacto.</p>
+      </div>
+      <div class="work-client__grid reveal">
+        <article class="work-client__item" data-video="https://www.youtube.com/embed/dQw4w9WgXcQ">
+          <div class="work-client__thumb">
+            <div class="work-client__play">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="white"><polygon points="8,5 19,12 8,19"/></svg>
+            </div>
+            <div class="work-client__placeholder">Video 1</div>
+          </div>
+          <p class="work-client__caption">Nombre del Video 1</p>
+        </article>
+        <article class="work-client__item" data-video="https://www.youtube.com/embed/dQw4w9WgXcQ">
+          <div class="work-client__thumb">
+            <div class="work-client__play">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="white"><polygon points="8,5 19,12 8,19"/></svg>
+            </div>
+            <div class="work-client__placeholder">Video 2</div>
+          </div>
+          <p class="work-client__caption">Nombre del Video 2</p>
+        </article>
+        <article class="work-client__item" data-video="https://www.youtube.com/embed/dQw4w9WgXcQ">
+          <div class="work-client__thumb">
+            <div class="work-client__play">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="white"><polygon points="8,5 19,12 8,19"/></svg>
+            </div>
+            <div class="work-client__placeholder">Video 3</div>
+          </div>
+          <p class="work-client__caption">Nombre del Video 3</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORKS: INFINITY RACING -->
+  <section class="work-client">
+    <div class="container">
+      <div class="work-client__header reveal">
+        <span class="work-client__number">02</span>
+        <h2 class="work-client__name">Infinity Racing</h2>
+        <span class="work-client__role">Content Manager</span>
+        <p class="work-client__desc" data-i18n="work.infinity.desc">Gestión de contenido para una empresa multinacional. Producción audiovisual y estrategia de redes sociales.</p>
+      </div>
+      <div class="work-client__grid reveal">
+        <article class="work-client__item" data-video="https://www.youtube.com/embed/obcW2DmlRxU">
+          <div class="work-client__thumb">
+            <div class="work-client__play">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="white"><polygon points="8,5 19,12 8,19"/></svg>
+            </div>
+            <img src="https://img.youtube.com/vi/obcW2DmlRxU/hqdefault.jpg" alt="Infinity Racing - Video 1" loading="lazy">
+          </div>
+        </article>
+        <article class="work-client__item" data-video="https://www.youtube.com/embed/odaUHyfWo8s">
+          <div class="work-client__thumb">
+            <div class="work-client__play">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="white"><polygon points="8,5 19,12 8,19"/></svg>
+            </div>
+            <img src="https://img.youtube.com/vi/odaUHyfWo8s/hqdefault.jpg" alt="Infinity Racing - Video 2" loading="lazy">
+          </div>
+        </article>
+        <article class="work-client__item" data-video="https://www.youtube.com/embed/bh6bu12KMbU">
+          <div class="work-client__thumb">
+            <div class="work-client__play">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="white"><polygon points="8,5 19,12 8,19"/></svg>
+            </div>
+            <img src="https://img.youtube.com/vi/bh6bu12KMbU/hqdefault.jpg" alt="Infinity Racing - Video 3" loading="lazy">
+          </div>
+        </article>
+        <article class="work-client__item" data-video="https://www.youtube.com/embed/eZv2w9MPWWM">
+          <div class="work-client__thumb">
+            <div class="work-client__play">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="white"><polygon points="8,5 19,12 8,19"/></svg>
+            </div>
+            <img src="https://img.youtube.com/vi/eZv2w9MPWWM/hqdefault.jpg" alt="Infinity Racing - Video 4" loading="lazy">
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORKS: AUTOCENTRO ANG -->
+  <section class="work-client">
+    <div class="container">
+      <div class="work-client__header reveal">
+        <span class="work-client__number">03</span>
+        <h2 class="work-client__name">Autocentro ANG</h2>
+        <span class="work-client__role">Video Editor & Strategist</span>
+        <p class="work-client__desc" data-i18n="work.ang.desc">Desarrollo de activos digitales de alta retención. Edición de video publicitario y contenido para redes.</p>
+      </div>
+      <div class="work-client__grid reveal">
+        <article class="work-client__item" data-video="https://www.youtube.com/embed/4YrPQBa1Cz4">
+          <div class="work-client__thumb">
+            <div class="work-client__play">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="white"><polygon points="8,5 19,12 8,19"/></svg>
+            </div>
+            <img src="https://img.youtube.com/vi/4YrPQBa1Cz4/hqdefault.jpg" alt="Autocentro ANG - Video 1" loading="lazy">
+          </div>
+        </article>
+        <article class="work-client__item" data-video="https://www.youtube.com/embed/MG1NNLLYK0M">
+          <div class="work-client__thumb">
+            <div class="work-client__play">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="white"><polygon points="8,5 19,12 8,19"/></svg>
+            </div>
+            <img src="https://img.youtube.com/vi/MG1NNLLYK0M/hqdefault.jpg" alt="Autocentro ANG - Video 2" loading="lazy">
+          </div>
+        </article>
+        <article class="work-client__item" data-video="https://www.youtube.com/embed/-U3UAA9GNaE">
+          <div class="work-client__thumb">
+            <div class="work-client__play">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="white"><polygon points="8,5 19,12 8,19"/></svg>
+            </div>
+            <img src="https://img.youtube.com/vi/-U3UAA9GNaE/hqdefault.jpg" alt="Autocentro ANG - Video 3" loading="lazy">
+          </div>
+        </article>
+        <article class="work-client__item" data-video="https://www.youtube.com/embed/Hol2_bHCSQ8">
+          <div class="work-client__thumb">
+            <div class="work-client__play">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="white"><polygon points="8,5 19,12 8,19"/></svg>
+            </div>
+            <img src="https://img.youtube.com/vi/Hol2_bHCSQ8/hqdefault.jpg" alt="Autocentro ANG - Video 4" loading="lazy">
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORKS: WER STUDIO -->
+  <section class="work-client">
+    <div class="container">
+      <div class="work-client__header reveal">
+        <span class="work-client__number">04</span>
+        <h2 class="work-client__name">Wer Studio</h2>
+        <span class="work-client__role">Content Strategist & Video Editor</span>
+        <p class="work-client__desc" data-i18n="work.wer.desc">Diseño de estrategias de contenido y producción audiovisual para marcas en diversos sectores.</p>
+      </div>
+      <div class="work-client__grid reveal">
+        <article class="work-client__item" data-video="https://www.youtube.com/embed/VKRJmVmKSHA">
+          <div class="work-client__thumb">
+            <div class="work-client__play">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="white"><polygon points="8,5 19,12 8,19"/></svg>
+            </div>
+            <img src="https://img.youtube.com/vi/VKRJmVmKSHA/hqdefault.jpg" alt="Wer Studio - Video 1" loading="lazy">
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Video Modal (global) -->
+  <div class="works__modal" id="videoModal">
+    <button class="works__modal-close" id="modalClose" aria-label="Cerrar">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M18 6L6 18M6 6l12 12"/>
+      </svg>
+    </button>
+    <div class="works__modal-content">
+      <div class="video-wrapper video-wrapper--vertical">
+        <iframe id="modalVideo" src="" title="Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="contact__wrapper">
+        <h2 class="contact__heading reveal" data-i18n="contact.heading">
+          ¿Tenés un proyecto en mente?<br>
+          Hablemos.
+        </h2>
+        <p class="contact__sub reveal" data-i18n="contact.sub">Estrategia de contenido y producción audiovisual para tu marca</p>
+        <div class="contact__links reveal">
+          <a href="mailto:mati@email.com" class="contact__link">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="4" width="20" height="16" rx="2"/>
+              <path d="M22 4L12 13 2 4"/>
+            </svg>
+            mati@email.com
+          </a>
+          <a href="https://instagram.com/" target="_blank" rel="noopener" class="contact__link">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="2" width="20" height="20" rx="5"/>
+              <circle cx="12" cy="12" r="5"/>
+              <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/>
+            </svg>
+            Instagram
+          </a>
+          <a href="https://linkedin.com/" target="_blank" rel="noopener" class="contact__link">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="2" width="20" height="20" rx="3"/>
+              <path d="M8 11v5M8 8v.01M12 16v-5c0-1 .6-2 2-2s2 1 2 2v5"/>
+            </svg>
+            LinkedIn
+          </a>
+          <a href="https://youtube.com/" target="_blank" rel="noopener" class="contact__link">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="4" width="20" height="16" rx="4"/>
+              <polygon points="10,8 16,12 10,16" fill="currentColor" stroke="none"/>
+            </svg>
+            YouTube
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <p data-i18n="footer">&copy; 2026 Matias Güernos. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="scripts/main.js"></script>
+</body>
+</html>
