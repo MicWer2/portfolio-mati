@@ -450,6 +450,10 @@ ul {
   cursor: grabbing;
 }
 
+.carousel.is-dragging .carousel__card {
+  transition: none;
+}
+
 /* Active card glow */
 .carousel__card--active {
   box-shadow: 0 25px 70px rgba(0, 0, 0, 0.5), 0 0 30px rgba(0, 240, 255, 0.12);
