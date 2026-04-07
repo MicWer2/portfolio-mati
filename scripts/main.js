@@ -258,15 +258,21 @@ document.addEventListener('DOMContentLoaded', () => {
       autoTimer = setInterval(autoAdvance, 3000);
     }
 
-    // Drag-to-scroll (continuous)
-    const DRAG_THRESHOLD = 80; // px per card advance
+    // Drag-to-scroll con momentum
+    const DRAG_THRESHOLD = 55;
     let startX = 0;
+    let lastX = 0;
+    let lastTime = 0;
+    let velocity = 0;
     let dragAccum = 0;
     let isDragging = false;
     let hasDragged = false;
 
     carousel.addEventListener('pointerdown', (e) => {
       startX = e.clientX;
+      lastX = e.clientX;
+      lastTime = Date.now();
+      velocity = 0;
       dragAccum = 0;
       isDragging = true;
       hasDragged = false;
@@ -277,6 +283,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     carousel.addEventListener('pointermove', (e) => {
       if (!isDragging) return;
+
+      const now = Date.now();
+      const dt = now - lastTime || 1;
+      velocity = (e.clientX - lastX) / dt; // px/ms
+      lastX = e.clientX;
+      lastTime = now;
+
       const delta = e.clientX - startX;
       const diff = delta - dragAccum;
 
@@ -289,10 +302,25 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
-    const endDrag = () => {
+    const endDrag = (e) => {
       if (!isDragging) return;
       isDragging = false;
       carousel.classList.remove('is-dragging');
+
+      // Momentum: si la velocidad era alta, avanza 1-2 cards más
+      const speed = Math.abs(velocity);
+      if (hasDragged && speed > 0.4) {
+        const extra = speed > 1.2 ? 2 : 1;
+        const dir = velocity > 0 ? -1 : 1;
+        let step = 0;
+        const momentum = setInterval(() => {
+          if (step >= extra) { clearInterval(momentum); return; }
+          active = ((active + dir) % total + total) % total;
+          updateCarousel();
+          step++;
+        }, 120);
+      }
+
       resetAutoPlay();
     };
 

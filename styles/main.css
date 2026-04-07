@@ -451,7 +451,7 @@ ul {
 }
 
 .carousel.is-dragging .carousel__card {
-  transition: none;
+  transition: transform 0.12s ease-out, opacity 0.12s ease-out;
 }
 
 /* Active card glow */
